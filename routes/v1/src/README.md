@@ -16,22 +16,17 @@ routes/
     └── apis.js
         static.js
         categories/
-        └─── credit_routes.js
-             user_routes.js
+        └─── <func>_routes.js
              ...
         src/
         └── core.js
             modules/
-            └── users.js
-                project.js
-                credit.js
+            └── <func>.js
                 ... 
                 db.js
                 models/
                 └── config.js
-                    credit.js
-                    project.js
-                    user.js
+                    db_<func>.js
                     ...
         test/
         └── (modules' name)/
@@ -46,16 +41,6 @@ routes/
 * `routes/v1/src/modules/`： 提供 `core.js` 內部功能實作。
 * `routes/v1/src/modules/models/`： 為內部功能實作中，涉及 database 操作的相關程式碼，讓 database 的操作較好做管理、延伸。
 * `routes/v1/test/`： 提供 core.js 相關單元測試項目，確認其是否可執行、以及其行為是否正確。
-
----
-
-## `Core.js`
-針對虛擬薪資系統設計的核心，主要處理金流（income）與薪資（outcome）的平衡
-
-### Features
-
-* 支援獨立運行（本質上 core 能夠在 `local 端` 測試）
-* 透過 export function call 讓外部 services 可以呼叫使用（藉此支援 RESTful API server）
 
 ---
 
